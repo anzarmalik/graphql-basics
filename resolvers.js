@@ -38,3 +38,43 @@ const resolvers = {
 
 
 export default resolvers
+
+// mutation{
+//     createCourse(input: {
+//       courseName: "learning graphql",
+//       price:300,
+//       stack:WEB,
+//       teachingAssists:[
+//         {
+//           firstName : "Ahmad"
+//           lastName : "syed"
+//           experience : 3 
+          
+//         },
+//         {
+//           firstName : "Syed"
+//           lastName : "sabir"
+//           experience : 5
+          
+//         }
+//       ]
+//     }){
+//       id,
+//       courseName
+//     }
+//   }
+
+
+// query{
+  
+//     getCourse(id:"1JMCT9iLt1lU6qCIaDUsV")
+//     {
+//       id,
+//       teachingAssists {
+//         firstName
+//         lastName
+//         experience
+//       }
+//     }
+    
+//   }
