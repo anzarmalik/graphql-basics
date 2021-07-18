@@ -36,7 +36,7 @@ const schema = buildSchema(`
         language : String
         email : String
         stack : Stack
-        teachingAssists : [TeachingAssistsInput]
+        teachingAssists : [TeachingAssistsInput]!
     }  
 
     input TeachingAssistsInput{
@@ -46,7 +46,7 @@ const schema = buildSchema(`
     }
 
     type Mutation {
-          createCourse(input :CourseInput ) : Course      
+          createCourse(input :CourseInput ) : Course
     }
 
 

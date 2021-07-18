@@ -11,6 +11,7 @@ class Course {
         teachingAssists,
     }){
         this.id = id;
+        this.courseName = courseName;
         this.category = category;
         this.price = price;
         this.language = language;
@@ -27,7 +28,7 @@ const resolvers = {
     getCourse : ({id})=>{
        return new Course(id,courseHolder[id])
     },
-    getCourse : ({input})=>{
+    createCourse : ({input})=>{
         let id = nanoid();
         courseHolder[id] = input;
         return new Course(id,input)
