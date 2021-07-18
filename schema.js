@@ -9,10 +9,10 @@ const schema = buildSchema(`
         language : String
         email : String
         stack : Stack
-        teachingAssists : [TeachAssist]
+        teachingAssists : [TeachingAssists]
     }
 
-    type TeachAssist {
+    type TeachingAssists {
         firstName : String
         lastName : String
         experience : Int 
@@ -24,10 +24,33 @@ const schema = buildSchema(`
         OTHER
     }
 
-
     type Query {
         getCourse(id: ID):Course
     }
+
+    input CourseInput{
+        id : ID 
+        courseName : String!
+        category : String
+        price : Int!
+        language : String
+        email : String
+        stack : Stack
+        teachingAssists : [TeachingAssistsInput]
+    }  
+
+    input TeachingAssistsInput{
+        firstName : String
+        lastName : String
+        experience : Int 
+    }
+
+    type Mutation {
+          createCourse(input :CourseInput ) : Course      
+    }
+
+
+
 `); 
 
 
